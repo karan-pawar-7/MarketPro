@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 // import { FaArrowRight, FaBars, FaTimes } from "react-icons/fa6";
 import ShinyText from "../components/ShinyText";
+import ThemeToggle from "../components/ThemeToggle";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -9,7 +10,7 @@ const Navbar = () => {
   const navLinks = [
     { name: "Home", path: "/" },
     { name: "Services", path: "/services" },
-        { name: "Result", path: "/result" },
+    { name: "Result", path: "/result" },
     { name: "Process", path: "/process" },
     { name: "Contact", path: "/contact" },
   ];
@@ -17,7 +18,7 @@ const Navbar = () => {
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-black/40 backdrop-blur-xl border-b border-white/10">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-        
+
         {/* Logo */}
         <NavLink to="/" className="flex items-center gap-3">
 
@@ -31,17 +32,17 @@ const Navbar = () => {
           <div>
             <h1 className="text-2xl font-bold text-white">
               <ShinyText
-                    text="Market Pro"
-                    speed={2}
-                    delay={0}
-                    color="#ffffff "
-                    shineColor="#FF5F15"
-                    spread={120}
-                    direction="left"
-                    yoyo={false}
-                    pauseOnHover={false}
-                    disabled={false}
-                />
+                text="Market Pro"
+                speed={2}
+                delay={0}
+                color="#ffffff "
+                shineColor="#FF5F15"
+                spread={120}
+                direction="left"
+                yoyo={false}
+                pauseOnHover={false}
+                disabled={false}
+              />
             </h1>
           </div>
 
@@ -55,10 +56,9 @@ const Navbar = () => {
               key={item.path}
               to={item.path}
               className={({ isActive }) =>
-                `font-medium transition duration-300 ${
-                  isActive
-                    ? "text-orange-500"
-                    : "text-gray-300 hover:text-orange-500"
+                `font-medium transition duration-300 ${isActive
+                  ? "text-orange-500"
+                  : "text-gray-300 hover:text-orange-500"
                 }`
               }
             >
@@ -67,6 +67,7 @@ const Navbar = () => {
           ))}
 
         </nav>
+          <ThemeToggle />
 
         {/* CTA Button */}
         <button className="hidden lg:flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full transition duration-300">
@@ -85,9 +86,8 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`lg:hidden bg-[#111] border-t border-white/10 transition-all duration-300 overflow-hidden ${
-          menuOpen ? "max-h-96 py-6" : "max-h-0"
-        }`}
+        className={`lg:hidden bg-[#111] border-t border-white/10 transition-all duration-300 overflow-hidden ${menuOpen ? "max-h-96 py-6" : "max-h-0"
+          }`}
       >
         <div className="flex flex-col items-center gap-6">
 
@@ -97,16 +97,16 @@ const Navbar = () => {
               to={item.path}
               onClick={() => setMenuOpen(false)}
               className={({ isActive }) =>
-                `text-lg ${
-                  isActive
-                    ? "text-orange-500"
-                    : "text-gray-300 hover:text-orange-500"
+                `text-lg ${isActive
+                  ? "text-orange-500"
+                  : "text-gray-300 hover:text-orange-500"
                 }`
               }
             >
               {item.name}
             </NavLink>
           ))}
+          <ThemeToggle />
 
           <button className="bg-orange-500 hover:bg-orange-600 text-white rounded-full flex items-center gap-2">
             Get Quote
