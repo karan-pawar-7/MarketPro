@@ -1,24 +1,32 @@
 const results = [
   {
-    number: "250+",
-    title: "Successful Campaigns",
-    desc: "Marketing campaigns launched across multiple industries.",
+    id: 1,
+    number: 120,
+    suffix: "+",
+    title: "Brands Grown",
+    desc: "Across B2B, e-commerce, SaaS, and local services."
   },
   {
-    number: "3.8x",
-    title: "Average ROI",
-    desc: "Average return on investment achieved for our clients.",
+    id: 2,
+    number: 3.8,
+    suffix: "x",
+    title: "Average ROAS",
+    desc: "Return on ad spend across all managed accounts."
   },
   {
-    number: "98%",
-    title: "Client Satisfaction",
-    desc: "Businesses continue working with us year after year.",
+    id: 3,
+    number: 94,
+    suffix: "%",
+    title: "Client Retention",
+    desc: "Because results speak louder than contracts."
   },
   {
-    number: "+210%",
+    id: 4,
+    number: 210,
+    suffix: "%",
     title: "Organic Growth",
-    desc: "Average increase in website traffic through SEO.",
-  },
+    desc: "SEO traffic increase within the first 12 months."
+  }
 ];
 
 export default results;

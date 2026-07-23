@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 // import { FaArrowRight, FaBars, FaTimes } from "react-icons/fa6";
+import ShinyText from "../components/ShinyText";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -20,15 +21,27 @@ const Navbar = () => {
         {/* Logo */}
         <NavLink to="/" className="flex items-center gap-3">
 
-          <div className="flex items-end gap-1">
-            <span className="w-1.5 h-3 bg-orange-500 rounded"></span>
-            <span className="w-1.5 h-5 bg-orange-500 rounded"></span>
-            <span className="w-1.5 h-7 bg-orange-500 rounded"></span>
+          <div className="flex items-end gap-[3px]">
+            <span className="w-1.5 h-[7px] bg-orange-500 "></span>
+            <span className="w-1.5 h-[14px] bg-orange-500 "></span>
+            <span className="w-1.5 h-[21px] bg-orange-500 "></span>
+            <span className="w-1.5 h-[28px] bg-orange-500 "></span>
           </div>
 
           <div>
             <h1 className="text-2xl font-bold text-white">
-              Market<span className="text-orange-500">Pro</span>
+              <ShinyText
+                    text="Market Pro"
+                    speed={2}
+                    delay={0}
+                    color="#ffffff "
+                    shineColor="#FF5F15"
+                    spread={120}
+                    direction="left"
+                    yoyo={false}
+                    pauseOnHover={false}
+                    disabled={false}
+                />
             </h1>
           </div>
 
@@ -95,7 +108,7 @@ const Navbar = () => {
             </NavLink>
           ))}
 
-          <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full flex items-center gap-2">
+          <button className="bg-orange-500 hover:bg-orange-600 text-white rounded-full flex items-center gap-2">
             Get Quote
             {/* <FaArrowRight /> */}
           </button>

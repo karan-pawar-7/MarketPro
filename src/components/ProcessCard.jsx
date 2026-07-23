@@ -5,10 +5,10 @@ const ProcessCard = ({ item }) => {
   const Icon = item.icon;
 
   return (
-    <div className="group relative overflow-hidden rounded-3xl border border-white/10 bg-[#151515] p-8 transition-all duration-500 hover:-translate-y-2 hover:border-orange-500">
-
+    
+        <div className="group relative overflow-hidden rounded-3xl border border-white/10 p-8 transition-all duration-500 hover:-translate-y-2 hover:border-orange-500">
       {/* Background Glow */}
-      <div className="absolute -bottom-20 -left-20 h-40 w-40 rounded-full bg-orange-500/10 blur-3xl opacity-0 group-hover:opacity-100 transition duration-500"></div>
+      <div className="absolute -bottom-20 -left-20 h-40 w-40  opacity-0 group-hover:opacity-100 transition duration-500"></div>
 
       {/* Step Number */}
       <span className="absolute top-6 right-6 text-6xl font-bold text-white/10 group-hover:text-white/20 transition duration-500">
@@ -43,6 +43,7 @@ const ProcessCard = ({ item }) => {
 
       </div>
     </div>
+
   );
 };
 
