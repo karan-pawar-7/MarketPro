@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 // import { FaArrowRight, FaBars, FaTimes } from "react-icons/fa6";
 import ShinyText from "../components/ShinyText";
-import ThemeToggle from "../components/ThemeToggle";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -67,7 +66,6 @@ const Navbar = () => {
           ))}
 
         </nav>
-          <ThemeToggle />
 
         {/* CTA Button */}
         <button className="hidden lg:flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full transition duration-300">
@@ -106,12 +104,13 @@ const Navbar = () => {
               {item.name}
             </NavLink>
           ))}
-          <ThemeToggle />
-
-          <button className="bg-orange-500 hover:bg-orange-600 text-white rounded-full flex items-center gap-2">
-            Get Quote
-            {/* <FaArrowRight /> */}
-          </button>
+          <div>
+           
+            <button className="bg-orange-500 hover:bg-orange-600 text-white rounded-full flex items-center gap-2">
+              Get Quote
+              {/* <FaArrowRight /> */}
+            </button>
+          </div>
 
         </div>
       </div>
